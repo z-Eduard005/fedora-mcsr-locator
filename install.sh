@@ -2,7 +2,6 @@
 DESKTOP_ENTRY_PATH="$HOME/.local/share/applications"
 START_SCRIPT="$(pwd)/start.sh"
 CB_SCRIPT="$(pwd)/get-last-cb-item.sh"
-LL_ICON=$(sed -n 's/^Icon=//p' "$DESKTOP_ENTRY_PATH/$2.desktop")
 
 success() { echo "$(printf '\033[1;32m%s\033[0m' "$*")"; }
 err() { echo "$(printf '\033[1;31m%s\033[0m' "$*")"; }
@@ -34,7 +33,7 @@ Name=$1
 Exec=/bin/bash -lc "$START_SCRIPT"
 Type=Application
 Terminal=false
-Icon=$LL_ICON
+Icon=$(sed -n 's/^Icon=//p' "$DESKTOP_ENTRY_PATH/$2.desktop")
 Categories=Application;
 EOF
 update-desktop-database "$DESKTOP_ENTRY_PATH"

@@ -4,7 +4,7 @@ Simple script designed for measuring eye angles. It parses `F3+C` coordinates fr
 
 ## Install Script
 ```bash
-git clone github.com/z-Eduard005/fedora-mcsr-locator && cd fedora-mcsr-locator && ./install.sh
+git clone https://github.com/z-Eduard005/fedora-mcsr-locator && cd fedora-mcsr-locator && ./install.sh
 ```
 
 ## Description
